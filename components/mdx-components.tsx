@@ -1,6 +1,7 @@
 import { Hero } from "@/components/Hero"
 import { Callout } from "@/components/callout"
 import { MdxCard } from "@/components/mdx-card"
+import Viewer from "@/components/viewer"
 import { cn } from "@/lib/utils"
 import { useMDXComponent } from "next-contentlayer/hooks"
 import Image from "next/image"
@@ -55,6 +56,7 @@ const components = {
   Callout,
   Card: MdxCard,
   Hero,
+  Viewer,
 }
 
 interface MdxProps {

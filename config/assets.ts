@@ -1,11 +1,5 @@
-// import Nav1_1Article from "@/content/1_1_机构简介.md";
-// import Nav1_2Article from "@/content/1_2_联系我们.md";
-// import Nav2_1Article from "@/content/2_1_联合国实习.md";
-// import Nav2_2Article from "@/content/2_2_模拟联合国.md";
-// import Nav4_1Article from "@/content/4_1_专家团队.md";
-// import Nav4_2Article from "@/content/4_2_联合国KIP国际学院.md";
-// import Nav4_3Article from "@/content/4_3_联合国地方经济发展局.md";
-// import Nav4_4Article from "@/content/4_4_联合国南南合作发展与创新处（IDEASS）.md";
+// @ts-ignore
+import PPT from "~/PPT-UNESCO(项目介绍画册).pptx"
 import Logo from "~/cregu_logo（页面顶部左上角）.png"
 import Nav3_Left from "~/导航 区/NEWS/二级展开/左侧简介.png"
 import Nav3_1Bg from "~/导航 区/NEWS/二级展开/机构咨询（底板）.png"
@@ -92,13 +86,11 @@ export const assets = {
             name: "机构简介",
             bg: Nav1_1Bg,
             fg: Nav1_1Fg,
-            // link: Nav1_1Article
           },
           {
             name: "联系我们",
             bg: Nav1_2Bg,
             fg: Nav1_2Fg,
-            // link: Nav1_2Article
           },
         ],
       },
@@ -110,13 +102,11 @@ export const assets = {
             name: "联合国实习",
             bg: Nav2_1Bg,
             fg: Nav2_1Fg,
-            // link: Nav2_1Article
           },
           {
             name: "模拟联合国",
             bg: Nav2_2Bg,
             fg: Nav2_2Fg,
-            // link: Nav2_2Article
           },
         ],
       },
@@ -133,25 +123,21 @@ export const assets = {
             name: "专家团队",
             bg: Nav4_1Bg,
             fg: Nav4_1Fg,
-            // link: Nav4_1Article
           },
           {
             name: "联合国KIP国际学院",
             bg: Nav4_2Bg,
             fg: Nav4_2Fg,
-            // link: Nav4_2Article
           },
           {
             name: "联合国地方经济发展局",
             bg: Nav4_3Bg,
             fg: Nav4_3Fg,
-            // link: Nav4_3Article
           },
           {
             name: "联合国XX合作发展与创新处",
             bg: Nav4_3Bg,
             fg: Nav4_3Fg,
-            // link: Nav4_4Article
           },
         ],
       },

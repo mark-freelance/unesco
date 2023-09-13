@@ -80,4 +80,9 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+
+  .p-interactive {
+    @apply bg-transparent text-muted-foreground hover:text-accent-foreground hover:bg-accent transition-colors;
+  }
+
 }

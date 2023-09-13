@@ -18,7 +18,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "~/*": ["./public/CREGU官网首页测试开发切片/*"],
+      "~/*": ["./public/core/*"],
       "contentlayer/generated": ["./.contentlayer/generated"]
 
     },
