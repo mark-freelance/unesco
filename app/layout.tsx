@@ -6,6 +6,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
+import { PropsWithChildren } from "react";
 
 export const metadata: Metadata = {
   title: {
@@ -24,11 +25,7 @@ export const metadata: Metadata = {
   },
 };
 
-interface RootLayoutProps {
-  children: React.ReactNode;
-}
-
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
