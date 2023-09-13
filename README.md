@@ -7,6 +7,10 @@ yarn
 yarn dev
 ```
 
+## demo preview
+
+at https://zsy2.cs-magic.cn
+
 ## project structure
 
 - 静态资源
