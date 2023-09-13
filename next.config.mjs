@@ -4,6 +4,8 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+
+  distDir: process.env.DIST ?? ".next",
 }
 
 export default nextConfig
