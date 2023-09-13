@@ -1,12 +1,11 @@
-import "@/styles/globals.css"
-import { Metadata } from "next"
-
-import { siteConfig } from "@/config/site"
-import { fontSans } from "@/lib/fonts"
-import { cn } from "@/lib/utils"
-import { SiteHeader } from "@/components/site-header"
-import { TailwindIndicator } from "@/components/tailwind-indicator"
-import { ThemeProvider } from "@/components/theme-provider"
+import "@/styles/globals.css";
+import { SiteHeader } from "@/components/site-header";
+import { TailwindIndicator } from "@/components/tailwind-indicator";
+import { ThemeProvider } from "@/components/theme-provider";
+import { siteConfig } from "@/config/site";
+import { fontSans } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
@@ -23,10 +22,10 @@ export const metadata: Metadata = {
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
-}
+};
 
 interface RootLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
@@ -34,21 +33,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <>
       <html lang="en" suppressHydrationWarning>
         <head />
-        <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
-          )}
-        >
+        <body className={cn("min-h-screen font-sans antialiased", fontSans.variable)}>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-            <div className="relative flex w-full overflow-x-hidden min-h-screen flex-col">
+            <div className="relative flex flex-col items-center">
               <SiteHeader />
-              <div className="flex-1">{children}</div>
+              <div className="w-full flex-1">{children}</div>
             </div>
             <TailwindIndicator />
           </ThemeProvider>
         </body>
       </html>
     </>
-  )
+  );
 }

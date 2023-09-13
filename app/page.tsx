@@ -1,4 +1,5 @@
 import { CardComp, KnowMoreButton } from "@/components/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Content1RTImage from "~/正文01 区/“战争起源于人的思想，因此必须在人的思想中筑起保卫和平的屏障”， 这对于“通过教育、科学、文化、传播和信息促进建设和平、消除贫.png";
@@ -46,11 +47,13 @@ const banners = [
 export default function IndexPage() {
   return (
     <>
-      <section id={"banner"}>
+      <section id={"banner"} className={"w-full"}>
         <div className="carousel w-full">
-          {banners.map((item, index) => (
-            <div id={`slide-${index}`} className="carousel-item relative w-full">
-              <CardComp {...item} pos={"inner-left-bottom"} withKnowMoreButton />
+          {banners.map(({ image, textImage }, index) => (
+            <div id={`slide-${index}`} className="carousel-item w-full relative">
+              <AspectRatio ratio={16 / 5}>
+                <Image src={image} alt={""} fill />
+              </AspectRatio>
               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                 <a href={`#slide-${(index - 1) % banners.length}`} className="btn btn-circle bg-muted/25 border-none">
                   {"<"}
@@ -59,12 +62,16 @@ export default function IndexPage() {
                   {">"}
                 </a>
               </div>
+              <div className={"absolute flex flex-col h-full justify-end px-20 py-4 md:py-12 gap-4"}>
+                <Image src={textImage} alt={""} className={"w-fit"} />
+                <KnowMoreButton />
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="w-full container grid items-center gap-6 pb-8 pt-6 md:py-10">
+      <section className="w-full max-w-[1400px] mx-auto container grid items-center gap-6 pb-8 pt-6 md:py-10">
         <section id={"content-1"} className={"w-full overflow-x-hidden grid grid-cols-1 md:grid-cols-2 items-center justify-between"}>
           <Image src={Content1LImage} alt={""} className={"w-full h-auto"} />
           <div className={"p-4 md:p-8 | flex flex-col items-center gap-8"}>

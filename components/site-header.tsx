@@ -22,8 +22,8 @@ import Logo from "~/cregu_logo（页面顶部左上角）.png";
 
 export function SiteHeader() {
   return (
-    <header className="fixed z-40 top-0 w-full border-b">
-      <div className="container flex p-2  space-x-4 justify-between items-end sm:space-x-0">
+    <header className="fixed z-40 top-0 px-8 w-full border-b">
+      <div className="container flex p-2 space-x-4 justify-between items-end sm:space-x-0 bg-priamry">
         <Image src={Logo} alt={"logo"} className={"h-12 w-auto"} />
 
         <NavigationMenu>
