@@ -1,9 +1,17 @@
 "use client";
 
-import { Icons } from "@/components/icons";
-import { MainNav } from "@/components/main-nav";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { buttonVariants } from "@/components/ui/button";
+// import {
+//   NavigationMenu,
+//   NavigationMenuContent,
+//   NavigationMenuItem,
+//   NavigationMenuLink,
+//   NavigationMenuList,
+//   NavigationMenuTrigger,
+//   navigationMenuTriggerStyle,
+// } from "@/components/ui/navigation-menu";
+import { assets } from "@/components/assets";
+import { SubNavCard } from "@/components/main/nav";
+import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,50 +19,40 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import { siteConfig } from "@/config/site";
-import { cn } from "@/lib/utils";
+} from "@radix-ui/react-navigation-menu";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Logo from "~/cregu_logo（页面顶部左上角）.png";
 
 export function SiteHeader() {
+  const bg = "bg-primary";
   return (
-    <header className="fixed z-40 top-0 px-8 w-full border-b">
-      <div className="container flex p-2 space-x-4 justify-between items-end sm:space-x-0 bg-priamry">
+    <header className={cn("fixed z-40 top-0 px-8 w-full border-b-2", bg)}>
+      <div className="container flex p-2 space-x-4 justify-between items-end sm:space-x-0">
         <Image src={Logo} alt={"logo"} className={"h-12 w-auto"} />
 
         <NavigationMenu>
-          <NavigationMenuList>
+          <NavigationMenuList className={"flex gap-4"}>
             <NavigationMenuItem>
               <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent text-white font-black")}>
-                  首页
-                </NavigationMenuLink>
+                <NavigationMenuLink className={cn("bg-transparent text-white font-black")}>首页</NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className={"bg-transparent text-white font-black"}>关于我们</NavigationMenuTrigger>
-              <NavigationMenuContent></NavigationMenuContent>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className={"bg-transparent text-white font-black"}>项目介绍</NavigationMenuTrigger>
-              <NavigationMenuContent></NavigationMenuContent>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className={"bg-transparent text-white font-black"}>NEWS</NavigationMenuTrigger>
-              <NavigationMenuContent></NavigationMenuContent>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className={"bg-transparent text-white font-black"}>合作机构</NavigationMenuTrigger>
-              <NavigationMenuContent></NavigationMenuContent>
-            </NavigationMenuItem>
+            {assets.nav.items.map((item, index) => (
+              <NavigationMenuItem key={index}>
+                <NavigationMenuTrigger className={"bg-transparent text-white font-black"}>{item.name}</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className={cn("fixed left-0 w-screen flex items-center h-fit p-4 gap-4 mt-3", bg)}>
+                    <Image src={item.left} alt={""} className={"w-fit md:mr-40"} />
+                    {item.children.map((props, index) => (
+                      <SubNavCard {...props} key={index} />
+                    ))}
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            ))}
           </NavigationMenuList>
         </NavigationMenu>
       </div>
