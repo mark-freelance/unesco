@@ -2,6 +2,7 @@
 
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { assets } from "@/config/assets"
+import { CENTER_LIMITER_CLASS } from "@/config/ui"
 import { cn } from "@/lib/utils"
 import {
   NavigationMenu,
@@ -19,7 +20,7 @@ export function SiteHeader() {
   const bgClass = "bg-primary"
   return (
     <header className={cn("sticky z-40 top-0 px-8 w-full border-b-2", bgClass)}>
-      <div className="container flex p-2 space-x-4 justify-between items-end sm:space-x-0">
+      <div className={cn("container flex py-2 space-x-4 justify-between items-end sm:space-x-0", CENTER_LIMITER_CLASS)}>
         <Image src={assets.logo} alt={"logo"} className={"h-12 w-auto"} />
 
         <NavigationMenu>
@@ -30,7 +31,7 @@ export function SiteHeader() {
               </Link>
             </NavigationMenuItem>
 
-            {assets.nav.items.map((item, i) => (
+            {assets.nav.children.map((item, i) => (
               <NavigationMenuItem key={i}>
                 {item.children ? (
                   <>

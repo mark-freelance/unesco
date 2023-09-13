@@ -29,6 +29,13 @@ import Nav2_1Fg from "~/导航 区/项目介绍/二级展开/模拟联合国.png
 import Nav2_1Bg from "~/导航 区/项目介绍/二级展开/模拟联合国（底图）.png"
 import Nav2_2Fg from "~/导航 区/项目介绍/二级展开/联合国实习.png"
 import Nav2_2Bg from "~/导航 区/项目介绍/二级展开/联合国实习（底图）.png"
+import Content4TImage from "~/正文04 区/NEWS.png"
+import Content4B2Image from "~/正文04 区/中 区/02 NEWS (底图).png"
+import Content4B2Text from "~/正文04 区/中 区/中心成员参加菜鸟集团 的探索可持续经营管理培训。.png"
+import Content4MImage from "~/正文04 区/关于我们的相关资讯可以 访问NEWS频道,我们会及时更新&发布。.png"
+import Content4B3Image from "~/正文04 区/右 区/03 NEWS (底图).png"
+import Content4B1Image from "~/正文04 区/左 区/01 NEWS (底图).png"
+import Content4B1Text from "~/正文04 区/左 区/中心将访问菜鸟集团， 探索可持续发展的新合作形式。.png"
 import Teacher1Name from "~/正文05 区/导师/01（导师名）.png"
 import Teacher1Avatar from "~/正文05 区/导师/01（导师头像）.png"
 import Teacher2Name from "~/正文05 区/导师/02（导师名）.png"
@@ -43,6 +50,27 @@ import Teacher6Name from "~/正文05 区/导师/06（导师名）.png"
 import Teacher6Avatar from "~/正文05 区/导师/06（导师头像）.png"
 
 export const assets = {
+  home: {
+    news: {
+      title: Content4TImage,
+      subTitle: Content4MImage,
+      children: [
+        { image: Content4B1Image, text: Content4B1Text },
+        { image: Content4B2Image, text: Content4B2Text },
+        { image: Content4B3Image, hasMore: true },
+      ],
+    },
+  },
+  news: {
+    tabs: [
+      { name: "主页", children: [{ name: "新闻", children: [{ image: "" }] }] },
+      { name: "事件" },
+      { name: "新闻发布" },
+      { name: "新闻与案例" },
+      { name: "多媒体" },
+      { name: "联系人" },
+    ],
+  },
   logo: Logo,
   teachers: {
     items: [
@@ -55,7 +83,7 @@ export const assets = {
     ],
   },
   nav: {
-    items: [
+    children: [
       {
         name: "关于我们",
         left: Nav1_Left,

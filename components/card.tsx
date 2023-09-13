@@ -1,29 +1,29 @@
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import Image, { StaticImageData } from "next/image";
-import { PropsWithChildren } from "react";
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import Image, { StaticImageData } from "next/image"
+import { PropsWithChildren } from "react"
 
 export const KnowMoreButton = () => {
   return (
     <Button className={"w-fit"} size={"thin"}>
       {"了解更多 ->"}
     </Button>
-  );
-};
+  )
+}
 
 export const CardComp = ({
   image,
-  textImage,
+  text,
   textCenter,
   withKnowMoreButton,
   pos,
   children,
 }: {
-  image: StaticImageData;
-  textImage?: StaticImageData;
-  textCenter?: boolean;
-  withKnowMoreButton?: boolean;
-  pos: "inner-left-bottom" | "inner-left-top" | "outer-bottom";
+  image: StaticImageData
+  text?: StaticImageData
+  textCenter?: boolean
+  withKnowMoreButton?: boolean
+  pos: "inner-left-bottom" | "inner-left-top" | "outer-bottom"
 } & PropsWithChildren) => {
   return (
     <div className={"relative w-full flex flex-col gap-2"}>
@@ -39,9 +39,9 @@ export const CardComp = ({
           pos === "inner-left-bottom" && "justify-end"
         )}
       >
-        {textImage && <Image src={textImage} alt={""} className={cn("w-fit", textCenter && "mx-auto")} />}
+        {text && <Image src={text} alt={""} className={cn("w-fit", textCenter && "mx-auto")} />}
         {withKnowMoreButton && <KnowMoreButton />}
       </div>
     </div>
-  );
-};
+  )
+}

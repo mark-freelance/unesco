@@ -1,12 +1,12 @@
-import "@/styles/globals.css";
-import { SiteHeader } from "@/components/site-header";
-import { TailwindIndicator } from "@/components/tailwind-indicator";
-import { ThemeProvider } from "@/components/theme-provider";
-import { siteConfig } from "@/config/site";
-import { fontSans } from "@/lib/fonts";
-import { cn } from "@/lib/utils";
-import { Metadata } from "next";
-import { PropsWithChildren } from "react";
+import "@/styles/globals.css"
+import { SiteHeader } from "@/components/site-header"
+import { TailwindIndicator } from "@/components/tailwind-indicator"
+import { ThemeProvider } from "@/components/theme-provider"
+import { siteConfig } from "@/config/site"
+import { fontSans } from "@/lib/fonts"
+import { cn } from "@/lib/utils"
+import { Metadata } from "next"
+import { PropsWithChildren } from "react"
 
 export const metadata: Metadata = {
   title: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
-};
+}
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
@@ -46,5 +46,5 @@ export default function RootLayout({ children }: PropsWithChildren) {
         </body>
       </html>
     </>
-  );
+  )
 }
