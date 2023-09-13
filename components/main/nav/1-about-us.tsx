@@ -1,4 +1,4 @@
-import { assets } from "@/components/assets";
+import { assets } from "@/app/assets";
 import { SubNavCard } from "@/components/main/nav/index";
 import { cn } from "@/lib/utils";
 import Image from "next/image";

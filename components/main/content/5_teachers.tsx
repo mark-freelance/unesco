@@ -1,4 +1,4 @@
-import { assets } from "@/components/assets";
+import { assets } from "@/app/assets";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 import Content5TImage from "~/正文05 区/导师展示.png";

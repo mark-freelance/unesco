@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -13,11 +13,14 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "noImplicitAny": false, // 加上这个，否则很累
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "~/*": ["./public/CREGU官网首页测试开发切片/*"]
+      "~/*": ["./public/CREGU官网首页测试开发切片/*"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
+
     },
     "plugins": [
       {
@@ -26,6 +29,6 @@
     ],
     "strictNullChecks": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts",  ".contentlayer/generated"],
   "exclude": ["node_modules"]
 }

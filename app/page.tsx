@@ -12,8 +12,6 @@ export default function IndexPage() {
     <>
       <Banner />
 
-      {/*<AboutUS />*/}
-
       <section className="w-full max-w-[1400px] mx-auto container grid items-center gap-6 pb-8 pt-6 md:py-10">
         {[Intro, Welcome, More, News, Teachers].map((Ele) => (
           <>
