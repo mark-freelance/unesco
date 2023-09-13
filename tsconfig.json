@@ -15,7 +15,8 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "~/*": ["./public/CREGU官网首页测试开发切片/*"]
     },
     "plugins": [
       {
