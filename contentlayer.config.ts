@@ -17,7 +17,7 @@ const computedFields: ComputedFields = {
 
 export const Article = defineDocumentType(() => ({
   name: "Article",
-  filePathPattern: `article/**/*.md`,
+  filePathPattern: `article/**/*.md*`,
   contentType: "mdx", // important, see: https://github.com/shadcn-ui/taxonomy/blob/main/contentlayer.config.js
   fields: {
     title: { type: "string", required: false },

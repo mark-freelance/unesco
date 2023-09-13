@@ -22,15 +22,5 @@ export const generateMetadata = ({ params }: { params: { slug: string[] } }) => 
 export default function Article({ params }: { params: { slug: string[] } }) {
   const post = getPostFromSlug(params.slug)
 
-  return (
-    <article
-      className={cn(
-        "mx-auto max-w-xl py-8 "
-        // "prose dark:prose-invert"
-      )}
-    >
-      <Mdx code={post.body.code} />
-      {/*<div className="[&>*]:mb-3 [&>*:last-child]:mb-0" dangerouslySetInnerHTML={{ __html: post.body.html }} />*/}
-    </article>
-  )
+  return <Mdx code={post.body.code} />
 }

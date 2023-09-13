@@ -1,3 +1,4 @@
+import { Hero } from "@/components/Hero"
 import { Callout } from "@/components/callout"
 import { MdxCard } from "@/components/mdx-card"
 import { cn } from "@/lib/utils"
@@ -53,6 +54,7 @@ const components = {
   Image,
   Callout,
   Card: MdxCard,
+  Hero,
 }
 
 interface MdxProps {
