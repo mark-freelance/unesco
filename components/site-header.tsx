@@ -1,9 +1,6 @@
 "use client"
 
 import { AspectRatio } from "@/components/ui/aspect-ratio"
-import { assets } from "@/config/assets"
-import { CENTER_LIMITER_CLASS } from "@/config/ui"
-import { cn } from "@/lib/utils"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,7 +8,11 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@radix-ui/react-navigation-menu"
+} from "@/components/ui/navigation-menu"
+import { assets } from "@/config/assets"
+import { CENTER_LIMITER_CLASS } from "@/config/ui"
+import { cn } from "@/lib/utils"
+// from "@radix-ui/react-navigation-menu"
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"
