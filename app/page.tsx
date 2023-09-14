@@ -2,6 +2,7 @@ import { HeroInHomePage } from "@/components/Hero"
 import { CardComp, KnowMoreButton } from "@/components/card"
 import { CenterContainer } from "@/components/container"
 import { Banner } from "@/components/main/banner"
+import { AllNews } from "@/components/news"
 import { Separator } from "@/components/ui/separator"
 import { assets } from "@/config/assets"
 import Image from "next/image"
@@ -41,13 +42,7 @@ export default function Page() {
             <section id={"content-4"} className={"grid grid-cols-1 gap-4"}>
               <Image src={assets.homePage.News.title} alt={""} className={"w-fit"} />
               <Image src={assets.homePage.News.subTitle} alt={""} className={"w-fit"} />
-              <div className={"grid grid-cols-1 md:grid-cols-3 gap-4"}>
-                {assets.homePage.News.children.map((item) => (
-                  <CardComp image={item.image} text={item.text} pos={"outer-bottom"}>
-                    {item.hasMore && <p className={"text-primary-foreground text-xl font-black"}>更多新闻</p>}
-                  </CardComp>
-                ))}
-              </div>
+              <AllNews />
             </section>
           ),
           // 5. 导师

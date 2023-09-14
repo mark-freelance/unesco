@@ -120,7 +120,7 @@ export const assets = {
               fg: Nav4_3Fg,
             },
             {
-              name: "联合国XX合作发展与创新处",
+              name: "联合国南南合作发展与创新处",
               image: Nav4_3Bg,
               fg: Nav4_3Fg,
             },
@@ -141,9 +141,9 @@ export const assets = {
       title: Content4TImage,
       subTitle: Content4MImage,
       children: [
-        { image: Content4B1Image, text: Content4B1Text },
-        { image: Content4B2Image, text: Content4B2Text },
-        { image: Content4B3Image, hasMore: true },
+        { image: Content4B1Image, text: Content4B1Text, link: "/news/1" },
+        { image: Content4B2Image, text: Content4B2Text, link: "/news/2" },
+        { image: Content4B3Image, link: "/news", hasMore: true },
       ],
     },
     modules: {
