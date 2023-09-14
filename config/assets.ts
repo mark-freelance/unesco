@@ -1,3 +1,4 @@
+import teachers from "./teachers.json"
 import Logo from "~/cregu_logo（页面顶部左上角）.png"
 import Nav3_Left from "~/导航 区/NEWS/二级展开/左侧简介.png"
 import Nav3_1Bg from "~/导航 区/NEWS/二级展开/机构咨询（底板）.png"
@@ -68,12 +69,12 @@ export const assets = {
           children: [
             {
               name: "机构简介",
-              bg: Nav1_1Bg,
+              image: Nav1_1Bg,
               fg: Nav1_1Fg,
             },
             {
               name: "联系我们",
-              bg: Nav1_2Bg,
+              image: Nav1_2Bg,
               fg: Nav1_2Fg,
             },
           ],
@@ -84,12 +85,12 @@ export const assets = {
           children: [
             {
               name: "联合国实习",
-              bg: Nav2_1Bg,
+              image: Nav2_1Bg,
               fg: Nav2_1Fg,
             },
             {
               name: "模拟联合国",
-              bg: Nav2_2Bg,
+              image: Nav2_2Bg,
               fg: Nav2_2Fg,
             },
           ],
@@ -105,28 +106,29 @@ export const assets = {
           children: [
             {
               name: "专家团队",
-              bg: Nav4_1Bg,
+              image: Nav4_1Bg,
               fg: Nav4_1Fg,
             },
             {
               name: "联合国KIP国际学院",
-              bg: Nav4_2Bg,
+              image: Nav4_2Bg,
               fg: Nav4_2Fg,
             },
             {
               name: "联合国地方经济发展局",
-              bg: Nav4_3Bg,
+              image: Nav4_3Bg,
               fg: Nav4_3Fg,
             },
             {
               name: "联合国XX合作发展与创新处",
-              bg: Nav4_3Bg,
+              image: Nav4_3Bg,
               fg: Nav4_3Fg,
             },
           ],
         },
       ],
     },
+    teachers,
   },
 
   homePage: {
@@ -200,3 +202,5 @@ export const assets = {
     ],
   },
 }
+
+export type ITeacher = (typeof teachers)[0]

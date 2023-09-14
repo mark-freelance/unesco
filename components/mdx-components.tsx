@@ -1,4 +1,4 @@
-import { Hero } from "@/components/Hero"
+import { HeroInTeachersPage } from "@/components/Hero"
 import { Callout } from "@/components/callout"
 import { MdxCard } from "@/components/mdx-card"
 import Viewer from "@/components/viewer"
@@ -55,7 +55,7 @@ const components = {
   Image,
   Callout,
   Card: MdxCard,
-  Hero,
+  Hero: HeroInTeachersPage,
   Viewer,
 }
 

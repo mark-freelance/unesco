@@ -42,11 +42,11 @@ export function SiteHeader() {
                     <NavigationMenuContent>
                       <div className={cn("fixed left-0 w-screen flex items-center h-fit p-4 gap-4 mt-3", bgClass)}>
                         <Image src={item.left} alt={""} className={"w-fit md:mr-40"} />
-                        {item.children.map(({ name, bg }, j) => (
+                        {item.children.map(({ name, image }, j) => (
                           <Link href={`/article/${i + 1}/${j + 1}`} key={j}>
                             <div className={"w-32 "}>
                               <AspectRatio ratio={1} className={"relative"}>
-                                <Image src={bg} alt={""} fill sizes={"width:128px;"} />
+                                <Image src={image} alt={""} fill sizes={"width:128px;"} />
                                 <div className={"absolute w-full h-full | flex items-center justify-center z-10"}>
                                   <span className={"text-white font-medium w-2/3 text-center text-shadow"}>{name}</span>
                                 </div>

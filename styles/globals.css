@@ -86,3 +86,12 @@
   }
 
 }
+
+
+/* ref: https://stackoverflow.com/a/13184714/9422455 */
+a.anchor {
+  display: block;
+  position: relative;
+  top: -60px;
+  visibility: hidden;
+}

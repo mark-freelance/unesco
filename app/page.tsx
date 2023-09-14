@@ -1,7 +1,7 @@
+import { HeroInHomePage } from "@/components/Hero"
 import { CardComp, KnowMoreButton } from "@/components/card"
 import { CenterContainer } from "@/components/container"
 import { Banner } from "@/components/main/banner"
-import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Separator } from "@/components/ui/separator"
 import { assets } from "@/config/assets"
 import Image from "next/image"
@@ -12,6 +12,7 @@ export default function Page() {
       <Banner />
       <CenterContainer>
         {[
+          // 1. intro
           () => (
             <section id={"content-1"} className={"w-full overflow-x-hidden grid grid-cols-1 md:grid-cols-2 items-center justify-between"}>
               <Image src={assets.homePage.modules.Intro.left.image} alt={""} className={"w-full h-auto"} />
@@ -21,6 +22,7 @@ export default function Page() {
               </div>
             </section>
           ),
+          // 2. 联合国
           () => (
             <section id={"content-2"} className={"grid grid-cols-1 md:grid-cols-2 gap-4"}>
               {assets.homePage.modules.UnitedNations.children.map((item, index) => (
@@ -28,11 +30,13 @@ export default function Page() {
               ))}
             </section>
           ),
+          // 3. 更多
           () => (
             <section id={"content-3"} className={"grid grid-cols-1 gap-4"}>
               <CardComp {...assets.homePage.modules.More} pos={"inner-left-top"} />
             </section>
           ),
+          // 4. 新闻
           () => (
             <section id={"content-4"} className={"grid grid-cols-1 gap-4"}>
               <Image src={assets.homePage.News.title} alt={""} className={"w-fit"} />
@@ -46,22 +50,16 @@ export default function Page() {
               </div>
             </section>
           ),
+          // 5. 导师
           () => (
             <section id={"content-5"} className={"grid grid-cols-1 gap-4"}>
               <Image src={assets.homePage.modules.Teachers.top} alt={""} className={"w-fit"} />
               <Image src={assets.homePage.modules.Teachers.middle} alt={""} className={"w-fit"} />
 
-              <div className="w-full grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4">
-                {assets.teachersPage.children.map((i, index) => {
-                  return (
-                    <div className={"flex flex-col gap-4 w-full"} key={index}>
-                      <AspectRatio ratio={3 / 4} className={"w-full"}>
-                        <Image src={i.avatar} alt={""} fill sizes={"width:160px;"} />
-                      </AspectRatio>
-                      <Image src={i.name} alt={""} className={"w-fit"} />
-                    </div>
-                  )
-                })}
+              <div className="w-full flex flex-wrap justify-around gap-4">
+                {assets.general.teachers.map((props) => (
+                  <HeroInHomePage {...props} key={props.id} />
+                ))}
               </div>
             </section>
           ),
