@@ -40,6 +40,11 @@ export default function RootLayout({ children }: PropsWithChildren) {
             <div className="relative flex flex-col items-center">
               <SiteHeader />
               <div className="w-full flex-1">{children}</div>
+
+              <div className={'w-full bg-primary'}>
+
+              </div>
+
             </div>
             <TailwindIndicator />
           </ThemeProvider>

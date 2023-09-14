@@ -11,17 +11,17 @@ export default function News() {
     <>
       <Banner />
       <CenterContainer>
-        <Tabs defaultValue={assets.news.tabs[0].name} className="w-full">
+        <Tabs defaultValue={assets.newsPage.children[0].name} className="w-full">
           <TabsList className={"w-full justify-start"}>
-            {assets.news.tabs.map((tab) => (
+            {assets.newsPage.children.map((tab) => (
               <TabsTrigger value={tab.name}>{tab.name}</TabsTrigger>
             ))}
           </TabsList>
-          <TabsContent value={assets.news.tabs[0].name}>
+          <TabsContent value={assets.newsPage.children[0].name}>
             <h2 className={"text-xl p-4 font-black"}>新闻</h2>
             <div className={"grid grid-cols-1 md:grid-cols-3 gap-4"}>
-              {assets.home.news.children.map((item) => (
-                <CardComp image={item.image} text={item.text} pos={"outer-bottom"} withKnowMoreButton={item.hasMore}>
+              {assets.homePage.News.children.map((item) => (
+                <CardComp {...item} pos={"outer-bottom"}>
                   {item.hasMore && <p className={"text-primary-foreground text-xl font-black"}>更多新闻</p>}
                 </CardComp>
               ))}

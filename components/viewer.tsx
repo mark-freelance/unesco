@@ -37,11 +37,7 @@ export default function Viewer({ uri }: { uri?: string }) {
         <IconContainer>
           <FullscreenIcon onClick={toggle} className={"absolute right-8 top-8 z-10"} />
         </IconContainer>
-        <Document
-          file={"/core/PPT-UNESCO(项目介绍画册).pdf"}
-          onLoadSuccess={onDocumentLoadSuccess}
-          className={"max-h-screen overflow-auto"}
-        >
+        <Document file={uri} onLoadSuccess={onDocumentLoadSuccess} className={"max-h-screen overflow-auto"}>
           {_.range(numPages).map((pageNumber) => (
             <Page pageNumber={pageNumber} width={width} key={pageNumber} noData={""} />
           ))}

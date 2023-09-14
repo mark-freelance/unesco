@@ -1,13 +1,16 @@
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import Image, { StaticImageData } from "next/image"
+import Link from "next/link"
 import { PropsWithChildren } from "react"
 
-export const KnowMoreButton = () => {
+export const KnowMoreButton = ({ link }: { link: string }) => {
   return (
-    <Button className={"w-fit"} size={"thin"}>
-      {"了解更多 ->"}
-    </Button>
+    <Link href={link}>
+      <Button className={"w-fit"} size={"thin"}>
+        {"了解更多 ->"}
+      </Button>
+    </Link>
   )
 }
 
@@ -15,15 +18,15 @@ export const CardComp = ({
   image,
   text,
   textCenter,
-  withKnowMoreButton,
   pos,
   children,
+  link,
 }: {
   image: StaticImageData
   text?: StaticImageData
   textCenter?: boolean
-  withKnowMoreButton?: boolean
   pos: "inner-left-bottom" | "inner-left-top" | "outer-bottom"
+  link?: string
 } & PropsWithChildren) => {
   return (
     <div className={"relative w-full flex flex-col gap-2"}>
@@ -40,7 +43,7 @@ export const CardComp = ({
         )}
       >
         {text && <Image src={text} alt={""} className={cn("w-fit", textCenter && "mx-auto")} />}
-        {withKnowMoreButton && <KnowMoreButton />}
+        {link && <KnowMoreButton link={link} />}
       </div>
     </div>
   )
