@@ -73,6 +73,11 @@ export const assets = {
               fg: Nav1_1Fg,
             },
             {
+              name: "专家团队",
+              image: Nav4_1Bg,
+              fg: Nav4_1Fg,
+            },
+            {
               name: "联系我们",
               image: Nav1_2Bg,
               fg: Nav1_2Fg,
@@ -104,11 +109,6 @@ export const assets = {
           name: "合作机构",
           left: Nav4_Left,
           children: [
-            {
-              name: "专家团队",
-              image: Nav4_1Bg,
-              fg: Nav4_1Fg,
-            },
             {
               name: "联合国KIP国际学院",
               image: Nav4_2Bg,

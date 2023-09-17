@@ -30,7 +30,7 @@ export const HeroInTeachersPage = ({ id, name, avatar, desc }: ITeacher) => {
 
 export const HeroInHomePage = ({ avatar, name, id }: ITeacher) => {
   return (
-    <Link className={"flex flex-col gap-2 w-[160px]"} href={`/article/4/1#${id}`}>
+    <Link className={"flex flex-col gap-2 w-[160px]"} href={`/article/1/2#${id}`}>
       <AspectRatio ratio={3 / 4}>
         <Image src={avatar} alt={""} fill sizes={"width:160px;"} />
       </AspectRatio>
