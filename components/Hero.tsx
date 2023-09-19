@@ -1,5 +1,5 @@
 import { AspectRatio } from "@/components/ui/aspect-ratio"
-import { ITeacher } from "@/config/assets"
+import { assets, ITeacher } from "@/config/assets"
 import Image from "next/image"
 import Link from "next/link"
 import ReactMarkdown from "react-markdown"
@@ -37,5 +37,15 @@ export const HeroInHomePage = ({ avatar, name, id }: ITeacher) => {
       <p>{name.zh}</p>
       <p>{name.en}</p>
     </Link>
+  )
+}
+
+export const HeroesInTeachersPage = () => {
+  return (
+    <div className={"flex flex-col gap-4"}>
+      {assets.general.teachers.map((props) => (
+        <HeroInTeachersPage {...props} key={props.id} />
+      ))}
+    </div>
   )
 }

@@ -1,4 +1,4 @@
-import { HeroInTeachersPage } from "@/components/Hero"
+import { HeroesInTeachersPage, HeroInTeachersPage } from "@/components/Hero"
 import { Callout } from "@/components/callout"
 import { MdxCard } from "@/components/mdx-card"
 import Viewer from "@/components/viewer"
@@ -56,6 +56,7 @@ const components = {
   Callout,
   Card: MdxCard,
   Hero: HeroInTeachersPage,
+  Heroes: HeroesInTeachersPage,
   Viewer,
 }
 
