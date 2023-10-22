@@ -2,6 +2,17 @@
 
 ## Usage
 
+### environment
+
+```shell
+# MacOS necessary, ref: https://github.com/Automattic/node-canvas/issues/2186
+brew install pkg-config cairo pango libpng jpeg giflib librsvg pixman
+
+yarn
+```
+
+### run
+
 ```bash
 yarn
 yarn dev
